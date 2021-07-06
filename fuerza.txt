@@ -1,0 +1,18 @@
+#!/bin/bash
+declare keyspace=(0 1 2 3 4 5 6 7 8 9 A B C D E F)
+len=${#keyspace[@]}
+
+#echo "The length of keyspace is $len"
+ind=0
+#echo "The first element of key space is ${keyspace[$ind]}"
+
+for ind in $(seq 0 15)
+do
+openssl enc -rc4 -d -K ${keyspace[$ind]} -iv 0 -in rc4_msg_bf.enc -out rc4_msg_bf.dec
+
+echo "For the key $ind"
+echo "The message is:"
+cat rc4_msg_bf.dec 
+echo ""
+echo ""
+done
