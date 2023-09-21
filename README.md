@@ -1,2 +1,3 @@
 # Procesamiento_De_Datos
-Scripts and projects generated in the data processing class
+Script para asignar curso a una lista de alumnos en un reporte utilizando libreria pandas de python para manejo de Data Frame
+
